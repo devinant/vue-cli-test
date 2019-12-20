@@ -30,7 +30,7 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <router-view />
     </v-content>
 
     <v-content>
@@ -41,14 +41,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue';
 import SimpleCalculator from '@/components/SimpleCalculator.vue';
 
 export default Vue.extend({
   name: 'App',
 
   components: {
-    HelloWorld,
     SimpleCalculator
   },
 
