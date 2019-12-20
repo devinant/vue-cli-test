@@ -30,12 +30,6 @@ npm run storybook:serve
 npm run storybook:build
 ```
 
-### Run your tests
-
-```
-npm run test
-```
-
 ### Lints and fixes files
 
 ```
@@ -46,6 +40,12 @@ npm run lint
 
 ```
 npm run test:e2e
+```
+
+### Run your end-to-end tests (headless mode)
+
+```
+npm run test:e2e:headless
 ```
 
 ### Run your unit tests
