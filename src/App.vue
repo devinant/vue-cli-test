@@ -32,18 +32,24 @@
     <v-content>
       <HelloWorld />
     </v-content>
+
+    <v-content>
+      <simple-calculator />
+    </v-content>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import SimpleCalculator from '@/components/SimpleCalculator.vue';
 
 export default Vue.extend({
   name: 'App',
 
   components: {
-    HelloWorld
+    HelloWorld,
+    SimpleCalculator
   },
 
   data: () => ({
