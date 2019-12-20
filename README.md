@@ -54,6 +54,25 @@ npm run test:e2e
 npm run test:unit
 ```
 
+### Visual Studio Code recommendations
+
+#### Plugins
+
+```
+eslint (dbaeumer.vscode-eslint)
+prettier (esbenp.prettier-vscode)
+octref.vetur (vetur)
+```
+
+#### Settings (/.vscode/settings.json)
+
+```
+{
+  "editor.formatOnSave": true,
+  "vetur.validation.template": true
+}
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
