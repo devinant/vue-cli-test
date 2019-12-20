@@ -8,11 +8,15 @@
 /* eslint-disable import/no-extraneous-dependencies, global-require, arrow-body-style */
 // const webpack = require('@cypress/webpack-preprocessor')
 
+const cypressTypeScriptPreprocessor = require('./cy-ts-preprocessor');
+
 module.exports = (on, config) => {
   // on('file:preprocessor', webpack({
   //  webpackOptions: require('@vue/cli-service/webpack.config'),
   //  watchOptions: {}
   // }))
+
+  on('file:preprocessor', cypressTypeScriptPreprocessor);
 
   return Object.assign({}, config, {
     fixturesFolder: 'tests/e2e/fixtures',

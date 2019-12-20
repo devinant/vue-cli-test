@@ -1,11 +1,11 @@
-const OperationType = {
-  Addition: 1,
-  Subtraction: 2,
-  Multiplication: 3,
-  Division: 4
-};
+enum OperationType {
+  Addition = 1,
+  Subtraction = 2,
+  Multiplication = 3,
+  Division = 4
+}
 
-const setOperands = (firstOperand, secondOperand) => {
+const setOperands = (firstOperand?: number, secondOperand?: number) => {
   cy.get('[data-cy="firstValue"]')
     .clear()
     .type(`${firstOperand}`);
@@ -15,12 +15,12 @@ const setOperands = (firstOperand, secondOperand) => {
     .type(`${secondOperand}`);
 };
 
-const selectOperation = operation => {
+const selectOperation = (operation: OperationType) => {
   cy.get('.v-select__selections').click();
   cy.get(`[role="option"]:nth-child(${operation})`).click();
 };
 
-const expectOperationResult = operationResult => {
+const expectOperationResult = (operationResult: string) => {
   cy.contains('[data-cy="result"]', operationResult);
 };
 
